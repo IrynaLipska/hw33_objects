@@ -55,6 +55,32 @@ function requaredFuel(distance) {
 
 alert(`You need ${requaredFuel(distance)} liters of fuel`);
 
+// Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
+// Для виведення часу на екран.
+// Зміни часу на передану кількість секунд.
+// Зміни часу на передану кількість хвилин.
+// Зміни часу на передану кількість годин.
+// Враховуйте, що в останніх 3-х функціях, при зміні однієї частини часу, може змінитися і інша. Наприклад: якщо до часу «20:59:45» додати 30 секунд, то повинно вийти «21:00:15», а не «20:59:75». Також потрібно передбачити можливість того що користувач може передати 150 секунд, або 75 хвилин.
+
+let clock = {
+  hours: 9,
+  minutes: 31,
+  second: 45,
+};
+
+function formatTime(currentTime) {
+  currentTime = Number(currentTime);
+  return currentTime < 10 ? "0" + currentTime : currentTime;
+}
+
+let h = clock.hours;
+let m = clock.minutes;
+let s = clock.second;
+
+console.log(
+  `Current time is ${formatTime(h)}:${formatTime(m)}:${formatTime(s)}`
+);
+
 // console.log(student);
 // console.log(student.name);
 // student.name = 'Vlada';
