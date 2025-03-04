@@ -81,6 +81,15 @@ console.log(
   `Current time is ${formatTime(h)}:${formatTime(m)}:${formatTime(s)}`
 );
 
+let h1 = +prompt("how many hours to add");
+
+function addHour(h1) {
+  clock.hours = (clock.hours + h1) % 24;
+  return clock.hours;
+}
+
+alert(`Now ${addHour(h1)} hours`);
+
 // console.log(student);
 // console.log(student.name);
 // student.name = 'Vlada';
