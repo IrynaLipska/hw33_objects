@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    font-size: 17px;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #eedfee;
+    background: linear-gradient(45deg, #7d8e93, #0c3447);
+}
+
+.header {
+    padding: 14px;
+    background: #031e2a;
+
+    &__title {
+        text-align: center;
+        font-weight: 400;
+    }
+}
