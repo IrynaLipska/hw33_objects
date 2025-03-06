@@ -6,82 +6,82 @@
 // Перевірка водія на наявність його ім’я у списку
 // Підрахунок необхідного часу та кількості палива для подолання переданої відстані з середньою швидкістю. Враховуй, що через кожні 4 години дороги водієві необхідно робити перерву на 1 годину.
 
-// const car = {
-//   brand: "Ford",
-//   model: "Kuga",
-//   year: 2017,
-//   speed: 90,
-//   fuel: 60,
-//   consumption: 6,
-//   drivers: ["First", "Second"],
+const car = {
+  brand: "Ford",
+  model: "Kuga",
+  year: 2017,
+  speed: 90,
+  fuel: 60,
+  consumption: 6,
+  drivers: ["First", "Second"],
 
-//   printCar() {
-//     Object.entries(this).forEach(([key, value]) => {
-//       if (typeof value !== "function") {
-//         console.log(`${key} : ${value}`);
-//       }
-//     });
-//   },
+  printCar() {
+    Object.entries(this).forEach(([key, value]) => {
+      if (typeof value !== "function") {
+        console.log(`${key} : ${value}`);
+      }
+    });
+  },
 
-//   addDriver() {
-//     this.drivers = [...this.drivers, "Third"];
-//   },
+  addDriver() {
+    this.drivers = [...this.drivers, "Third"];
+  },
 
-//   requaredTime(distance) {
-//     // let distance = +prompt("Enter your distance");
+  requaredTime(distance) {
+    // let distance = +prompt("Enter your distance");
 
-//     let time = distance / car.speed;
+    let time = distance / car.speed;
 
-//     if (time >= 4) {
-//       time = time + (time % 4);
-//     }
-//     let hours = 0;
-//     let minutes = 0;
-//     if (time < 1) {
-//       hours = 0;
-//       minutes = Math.round(time * 60);
-//     } else {
-//       hours = Math.round(time);
-//       minutes = Math.round((time - hours) * 60);
-//     }
-//     // alert(`Travel time is ${hours} hours ${minutes} minutes`);
-//     return { hours, minutes };
-//   },
-//   requaredFuel(distance) {
-//     let fuelQuantity = 0;
-//     fuelQuantity = (distance / 100) * 6;
-//     return fuelQuantity;
-//   },
-//   currentInfo() {
-//     let distance = +prompt("Enter your distance");
-//     const { hours, minutes } = this.requaredTime(distance);
-//     const fuelQuantity = this.requaredFuel(distance);
-//     alert(`Travel time is ${hours} hours ${minutes} minutes
-//   You need ${fuelQuantity} liters of fuel`);
-//   },
-// };
+    if (time >= 4) {
+      time = time + (time % 4);
+    }
+    let hours = 0;
+    let minutes = 0;
+    if (time < 1) {
+      hours = 0;
+      minutes = Math.round(time * 60);
+    } else {
+      hours = Math.round(time);
+      minutes = Math.round((time - hours) * 60);
+    }
+    // alert(`Travel time is ${hours} hours ${minutes} minutes`);
+    return { hours, minutes };
+  },
+  requaredFuel(distance) {
+    let fuelQuantity = 0;
+    fuelQuantity = (distance / 100) * 6;
+    return fuelQuantity;
+  },
+  currentInfo() {
+    let distance = +prompt("Enter your distance");
+    const { hours, minutes } = this.requaredTime(distance);
+    const fuelQuantity = this.requaredFuel(distance);
+    alert(`Travel time is ${hours} hours ${minutes} minutes
+  You need ${fuelQuantity} liters of fuel`);
+  },
+};
 
-// console.log(Object.entries(car));
-// car.printCar();
+console.log(Object.entries(car));
+car.printCar();
 
-// console.log(car.drivers);
+console.log(car.drivers);
 
-// car.addDriver();
+car.addDriver();
 
-// console.log(car.drivers);
-// car.drivers = [...car.drivers, "Third"];
+console.log(car.drivers);
+car.drivers = [...car.drivers, "Third"];
 
-// console.log(car.drivers);
+console.log(car.drivers);
 
-// let driverName = "Second";
+let driverName = "Second";
 
-// if (car.drivers.includes(driverName)) {
-//   console.log(`${driverName} is in list`);
-// } else {
-//   console.log(`${driverName} is not in list`);
-// }
+if (car.drivers.includes(driverName)) {
+  console.log(`${driverName} is in list`);
+} else {
+  console.log(`${driverName} is not in list`);
+}
 
-// car.currentInfo();
+car.currentInfo();
 
 // Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
 // Для виведення часу на екран.
